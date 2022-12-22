@@ -31,7 +31,6 @@ const CreateCourse=new mongoose.Schema({
             Email:{
                 type: String,
                 maxLength: [30, "maximum String Length of Characters is 30"],
-                unique: true,
                 validate: [validator.isEmail, "this is check email valid or not"]
             }
         }
