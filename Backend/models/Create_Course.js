@@ -22,6 +22,37 @@ const CreateCourse=new mongoose.Schema({
         type:String,
         maxLength:[100,"string length cannot exceed 100 character"]
     },
+    Enrollers:[
+        {
+            Name:{
+                type:String
+            },
+            Email: {
+                require: true,
+                type: String,
+                maxLength: [30, "maximum String Length of Characters is 30"],
+                unique: true,
+                validate: [validator.isEmail, "this is check email valid or not"]
+            },
+        }
+    ],
+    Chats:[
+        {
+            Name:{
+                type:String
+            },
+            Email: {
+                require: true,
+                type: String,
+                maxLength: [30, "maximum String Length of Characters is 30"],
+                unique: true,
+                validate: [validator.isEmail, "this is check email valid or not"]
+            },
+            Chat:{
+                type:String,
+            }
+        }
+    ],
     CreatedBy:{
         Name:{
             require:true,
