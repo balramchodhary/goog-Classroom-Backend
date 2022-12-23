@@ -1,5 +1,4 @@
 const mongoose =require('mongoose')
-const validator=require('validator')
 
 const CreateCourse=new mongoose.Schema({
     CourseName:{
@@ -30,7 +29,6 @@ const CreateCourse=new mongoose.Schema({
             },
             Email:{
                 type: String,
-                maxLength: [30, "maximum String Length of Characters is 30"],
             }
         }
     ],
@@ -41,7 +39,6 @@ const CreateCourse=new mongoose.Schema({
             },
             Email:{
                 type: String,
-                maxLength: [30, "maximum String Length of Characters is 30"],
             },
             Chat:{
                 type: String,
