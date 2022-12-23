@@ -26,9 +26,6 @@ const CreateCourse=new mongoose.Schema({
         {
             Name:{
                 type:String
-            },
-            Email:{
-                type: String,
             }
         }
     ],
