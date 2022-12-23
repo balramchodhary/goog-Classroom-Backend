@@ -29,7 +29,6 @@ const CreateCourse=new mongoose.Schema({
                 type:String
             },
             Email: {
-                require: true,
                 type: String,
                 maxLength: [30, "maximum String Length of Characters is 30"],
                 unique: true,
@@ -42,8 +41,7 @@ const CreateCourse=new mongoose.Schema({
             Name:{
                 type:String
             },
-            UserEmail: {
-                require: true,
+            Email: {
                 type: String,
                 maxLength: [30, "maximum String Length of Characters is 30"],
                 unique: true,
