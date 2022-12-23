@@ -22,13 +22,6 @@ const CreateCourse=new mongoose.Schema({
         type:String,
         maxLength:[100,"string length cannot exceed 100 character"]
     },
-    Enrollers:[
-        {
-            Name:{
-                type:String
-            }
-        }
-    ],
     Chats:[
         {
             Name:{
