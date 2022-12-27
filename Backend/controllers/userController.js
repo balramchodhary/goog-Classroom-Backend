@@ -10,6 +10,12 @@ exports.createUser=async (req,res)=>{
 exports.userDetails=async (req,res)=>{
   const userData=await CreateUser.find();
 
+  if(!userData){
+    res.status(501).json({
+      success:false,
+      massage:"user data is not found into database"
+    })
+  }
   res.status(201).json({
     success:true,
     userData
