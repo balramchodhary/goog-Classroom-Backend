@@ -2,7 +2,12 @@ const mongoose = require('mongoose')
 const validator = require('validator')
 
 const CreateUser = new mongoose.Schema({
-    Name: {
+    FirstName: {
+        require: true,
+        type: String,
+        maxLength: [30, "maximum String Length of Characters is 30"]
+    },
+    LastName:{
         require: true,
         type: String,
         maxLength: [30, "maximum String Length of Characters is 30"]
